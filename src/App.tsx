@@ -53,7 +53,7 @@ export default function App() {
           <div className="hero-copy">
             <div className="template-pill">
               <Sparkles size={14} />
-              Plug-and-Play Project Page
+              MSIS 522 · Team 10
             </div>
             <h1>{projectData.title}</h1>
             <p className="owner-line">{projectData.ownerLine}</p>
@@ -91,18 +91,9 @@ export default function App() {
               <FileText size={22} />
             </div>
             <div>
-              <p className="instruction-title">How students should use this page</p>
-              <p className="instruction-subtitle">Fill in the content, keep the overall layout and pacing.</p>
+              <p className="instruction-title">Project at a glance</p>
+              <p className="instruction-subtitle">A multi-agent investment analysis platform for disciplined retail decision-making.</p>
             </div>
-          </div>
-
-          <div className="instruction-list">
-            {projectData.instructions.map((instruction) => (
-              <div key={instruction} className="instruction-card">
-                <CheckCircle2 size={20} />
-                <p>{instruction}</p>
-              </div>
-            ))}
           </div>
 
           <div className="metrics-grid">
@@ -167,29 +158,46 @@ export default function App() {
 
         <section>
           <SectionHeader
-            eyebrow="Team"
-            title="Show who built it and what each person owned"
-            description="This section should read like a real team build, not just a list of names. Make ownership specific."
+            eyebrow="Product Structure"
+            title="Three decision surfaces"
+            description="InvestiGate is organized around three connected views: workflow, portfolio context, and final recommendation."
           />
           <div className="card-grid two-up">
-            {projectData.members.map((member) => (
-              <div key={`${member.name}-${member.role}`} className="surface padded-card team-card">
-                <div className="team-avatar">{member.name.replace(/[[\]]/g, '').split(' ').filter(Boolean).map((part) => part[0]).join('').slice(0, 2).toUpperCase() || 'TM'}</div>
-                <div>
-                  <h3>{member.name}</h3>
-                  <p className="team-role">{member.role}</p>
-                  <p className="body-copy compact">{member.focus}</p>
-                </div>
+            <div className="surface padded-card">
+              <div className="icon-box cyan-box">
+                <Network size={18} />
               </div>
-            ))}
+              <h3>Workflow</h3>
+              <p className="body-copy compact">
+                A user enters a natural-language query (e.g., "Should I buy NVDA?"), selects Buy/Hold/Sell, and sets amount, risk tolerance, and time horizon. The system retrieves SEC 10-K filings, live market data, and historical precedents, then runs Bull, Bear, and Strategist agents in parallel before the Judge synthesizes a final verdict.
+              </p>
+            </div>
+            <div className="surface padded-card">
+              <div className="icon-box emerald-box">
+                <BarChart3 size={18} />
+              </div>
+              <h3>Portfolio</h3>
+              <p className="body-copy compact">
+                The portfolio dashboard surfaces total value, gain/loss, growth trends, and per-position detail across sectors. It flags concentration risks when a single stock or sector exceeds safe thresholds, detects hidden exposure through ETF look-through analysis, and identifies missing protections such as bond buffers or international diversification.
+              </p>
+            </div>
+            <div className="surface padded-card">
+              <div className="icon-box violet-box">
+                <Lightbulb size={18} />
+              </div>
+              <h3>Recommendation</h3>
+              <p className="body-copy compact">
+                The results view presents the full analysis: an executive verdict with traffic-light signal, the Bull's investment thesis, the Bear's principal risks, the Strategist's allocation recommendation, hidden exposure detection, historical scenario precedents, a confidence breakdown across key dimensions, a data log of sources consulted, a disclaimer, and an exportable report.
+              </p>
+            </div>
           </div>
         </section>
 
         <section>
           <SectionHeader
             eyebrow="Gallery"
-            title="Add screenshots, diagrams, evidence, and visual proof"
-            description="Students can place screenshots, diagrams, PDFs, or photos inside public/project-assets and reference them from the data file."
+            title="Product walkthrough"
+            description="Visual walkthrough of the InvestiGate experience across workflow, portfolio, and recommendation views."
           />
           <div className="card-grid two-up">
             {projectData.gallery.map((item) =>
@@ -223,7 +231,7 @@ export default function App() {
               </div>
               <div>
                 <p className="eyebrow">Stack</p>
-                <h3>Make the stack easy to scan</h3>
+                <h3>Technology stack</h3>
               </div>
             </div>
             <div className="stack-list">
@@ -253,7 +261,7 @@ export default function App() {
               </div>
               <div>
                 <p className="eyebrow">Methods</p>
-                <h3>Call out the techniques quickly</h3>
+                <h3>Core AI methods</h3>
               </div>
             </div>
             <div className="method-grid">
@@ -264,7 +272,7 @@ export default function App() {
                   </div>
                   <div>
                     <p className="method-title">{method}</p>
-                    <p className="method-note">Explain how this method improved speed, quality, or reliability.</p>
+                    <p className="method-note"></p>
                   </div>
                 </div>
               ))}
@@ -275,8 +283,8 @@ export default function App() {
         <section>
           <SectionHeader
             eyebrow="Product"
-            title="Break the experience into feature cards"
-            description="Each card should explain what the user does, what the system does, and what concrete value the interaction creates."
+            title="Key capabilities"
+            description="The core features that power InvestiGate's structured decision-support workflow."
           />
           <div className="card-grid two-up">
             {projectData.features.map((feature) => (
@@ -307,7 +315,7 @@ export default function App() {
               </div>
               <div>
                 <p className="eyebrow">Architecture</p>
-                <h3>Explain how the system works</h3>
+                <h3>System architecture</h3>
               </div>
             </div>
             <div className="architecture-list">
@@ -330,7 +338,7 @@ export default function App() {
               </div>
               <div>
                 <p className="eyebrow">Code Highlights</p>
-                <h3>Paste short code samples if they help</h3>
+                <h3>Implementation highlights</h3>
               </div>
             </div>
             <div className="code-list">
@@ -360,7 +368,7 @@ export default function App() {
               </div>
               <div>
                 <p className="eyebrow">Roadmap</p>
-                <h3>Show momentum and next steps</h3>
+                <h3>Development roadmap</h3>
               </div>
             </div>
             <div className="roadmap-list">
@@ -387,7 +395,7 @@ export default function App() {
               </div>
               <div>
                 <p className="eyebrow">Risks</p>
-                <h3>Be honest about constraints</h3>
+                <h3>Risks and constraints</h3>
               </div>
             </div>
             <div className="risk-list">
@@ -403,11 +411,10 @@ export default function App() {
 
         <section className="closing-card">
           <div>
-            <p className="dark-eyebrow">Closing Section</p>
-            <h2>End with a clear business case</h2>
+            <p className="dark-eyebrow">Summary</p>
+            <h2>Built for better decisions</h2>
             <p>
-              The strongest project pages do not stop at “here is our interface.” They explain why the idea matters,
-              how the system is built, what evidence exists today, and what should happen next.
+              InvestiGate exists because retail investors deserve the same structured analysis that institutional teams take for granted {'\u2014'} without the six-figure terminal cost.
             </p>
           </div>
 
@@ -417,28 +424,28 @@ export default function App() {
                 <Users size={18} />
               </div>
               <h3>Who benefits?</h3>
-              <p>State the user, customer, or stakeholder group in plain language.</p>
+              <p>Self-directed retail investors who want structured, evidence-grounded analysis instead of headline-chasing and guesswork.</p>
             </div>
             <div className="closing-mini-card">
               <div className="icon-box dark-icon-box">
                 <Target size={18} />
               </div>
               <h3>What changes?</h3>
-              <p>Explain the operational, financial, or human outcome the project improves.</p>
+              <p>Fewer impulsive trades during volatility. More portfolio-aware, evidence-scored decision-making before every buy, hold, or sell.</p>
             </div>
             <div className="closing-mini-card">
               <div className="icon-box dark-icon-box">
                 <Layers3 size={18} />
               </div>
               <h3>Why this build?</h3>
-              <p>Call out the architecture or approach choices that make the solution credible.</p>
+              <p>Multi-agent adversarial debate with Gated RAG grounding and evidence scoring forces the system to present both sides and flag weak claims.</p>
             </div>
             <div className="closing-mini-card">
               <div className="icon-box dark-icon-box">
                 <Rocket size={18} />
               </div>
               <h3>What is next?</h3>
-              <p>Name the next test, launch step, or milestone that turns the prototype into a stronger product.</p>
+              <p>Plaid portfolio sync, voice input, PDF report export, and real-time agent streaming to move from demo prototype toward production.</p>
             </div>
           </div>
         </section>
