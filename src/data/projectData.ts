@@ -140,49 +140,49 @@ export const projectData: ProjectPageData = {
     {
       title: 'Workflow \u2014 Query & Risk Controls',
       caption: 'The main InvestiGate interface where users enter a query, select Buy/Hold/Sell, set amount and risk tolerance, and see portfolio summary with concentration warnings before launching the analysis.',
-      assetPath: '/project-assets/WorkFlow 1.png',
+      assetPath: '/project-assets/workflow-1.png',
     },
     {
       title: 'Workflow \u2014 Holdings & Position Selection',
       caption: 'The holdings list with per-position sparklines and values. Users select any position to trigger the multi-agent analysis workflow for that asset.',
-      assetPath: '/project-assets/Workflow 2.png',
+      assetPath: '/project-assets/workflow-2.png',
     },
     {
       title: 'Workflow \u2014 Multi-Agent Analysis in Progress',
       caption: 'Four AI agents (Bull Analyst, Bear Analyst, Portfolio Strategist, Judge) running in parallel with real-time progress indicators and data grounding steps (SEC 10-K, news corpus, RAG vector store).',
-      assetPath: '/project-assets/Analysis part.png',
+      assetPath: '/project-assets/analysis-part.png',
     },
     // — Portfolio —
     {
       title: 'Portfolio \u2014 Overview & Growth',
       caption: 'Portfolio-level summary showing total value ($82,000), gain/loss ($17,500), 18-month growth (+41.4%), and holdings count across 7 sectors.',
-      assetPath: '/project-assets/Porfolio Dashboard.png',
+      assetPath: '/project-assets/portfolio-dashboard-overview.png',
     },
     {
       title: 'Portfolio \u2014 Holdings Detail',
       caption: 'Detailed holdings table with ticker, shares, cost basis, gain/loss, portfolio weight, and sector for each position.',
-      assetPath: '/project-assets/Portfoilo Dashboard.png',
+      assetPath: '/project-assets/portfolio-dashboard-holdings.png',
     },
     // — Recommendation —
     {
       title: 'Recommendation \u2014 Bull Investment Thesis',
       caption: 'The results experience begins with the Bull Analyst\'s upside case: evidence quality score (25/40), best-case price target, key advantages, and growth catalysts. Speculative claims are flagged in orange for transparency.',
-      assetPath: '/project-assets/Section 3.png',
+      assetPath: '/project-assets/section-3-bull.png',
     },
     {
       title: 'Recommendation \u2014 Bear Principal Risks',
       caption: 'The Bear Analyst\'s downside case follows with risk factors, valuation concerns, cyclical risks, and direct rebuttals to the Bull\'s thesis. Speculative claims are explicitly marked.',
-      assetPath: '/project-assets/Section 4.png',
+      assetPath: '/project-assets/section-4-bear.png',
     },
     {
       title: 'Recommendation \u2014 Portfolio Allocation Strategy',
       caption: 'The Portfolio Strategist\'s allocation recommendation with concentration risk assessment, a suggested reduced allocation ($4,000 vs. requested $5,000), and ETF alternatives for diversification.',
-      assetPath: '/project-assets/Section 5.png',
+      assetPath: '/project-assets/section-5-strategist.png',
     },
     {
       title: 'Recommendation \u2014 Hidden Exposure Detection',
       caption: 'Part of the recommendation results: detects hidden stock exposure through index funds (SPY, VOO, VTI), shows before-and-after totals, and recommends a maximum allocation to stay under the 15% concentration limit.',
-      assetPath: '/project-assets/Hidden Ditection.png',
+      assetPath: '/project-assets/hidden-detection.png',
     },
     {
       title: 'Recommendation \u2014 Confidence Analysis & Agent Roles',

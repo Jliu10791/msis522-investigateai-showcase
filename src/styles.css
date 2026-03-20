@@ -511,13 +511,17 @@ select {
 }
 
 .gallery-image-wrap {
-  aspect-ratio: 16 / 10;
+  max-height: 400px;
   overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f8f9fa;
 }
 
 .gallery-image {
-  height: 100%;
-  object-fit: cover;
+  max-height: 400px;
+  object-fit: contain;
   width: 100%;
 }
 
