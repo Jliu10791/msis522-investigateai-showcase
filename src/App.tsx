@@ -164,28 +164,34 @@ export default function App() {
           />
           <div className="card-grid two-up">
             <div className="surface padded-card">
-              <div className="icon-box cyan-box">
-                <Network size={18} />
+              <div className="card-heading">
+                <div className="icon-box cyan-box">
+                  <Network size={18} />
+                </div>
+                <h3>Workflow</h3>
               </div>
-              <h3>Workflow</h3>
               <p className="body-copy compact">
-                A user enters a natural-language query (e.g., "Should I buy NVDA?"), selects Buy/Hold/Sell, and sets amount, risk tolerance, and time horizon. The system retrieves SEC 10-K filings, live market data, and historical precedents, then runs Bull, Bear, and Strategist agents in parallel before the Judge synthesizes a final verdict.
+                A user enters a natural-language query (e.g., "Should I buy ACN?"), selects Buy/Hold/Sell, and sets amount, risk tolerance, and time horizon. The system retrieves SEC 10-K filings, live market data, and historical precedents, then runs Bull, Bear, and Strategist agents in parallel before the Judge synthesizes a final verdict.
               </p>
             </div>
             <div className="surface padded-card">
-              <div className="icon-box emerald-box">
-                <BarChart3 size={18} />
+              <div className="card-heading">
+                <div className="icon-box emerald-box">
+                  <BarChart3 size={18} />
+                </div>
+                <h3>Portfolio</h3>
               </div>
-              <h3>Portfolio</h3>
               <p className="body-copy compact">
                 The portfolio dashboard surfaces total value, gain/loss, growth trends, and per-position detail across sectors. It flags concentration risks when a single stock or sector exceeds safe thresholds, detects hidden exposure through ETF look-through analysis, and identifies missing protections such as bond buffers or international diversification.
               </p>
             </div>
             <div className="surface padded-card">
-              <div className="icon-box violet-box">
-                <Lightbulb size={18} />
+              <div className="card-heading">
+                <div className="icon-box violet-box">
+                  <Lightbulb size={18} />
+                </div>
+                <h3>Recommendation</h3>
               </div>
-              <h3>Recommendation</h3>
               <p className="body-copy compact">
                 The results view presents the full analysis: an executive verdict with traffic-light signal, the Bull's investment thesis, the Bear's principal risks, the Strategist's allocation recommendation, hidden exposure detection, historical scenario precedents, a confidence breakdown across key dimensions, a data log of sources consulted, a disclaimer, and an exportable report.
               </p>
@@ -289,10 +295,12 @@ export default function App() {
           <div className="card-grid two-up">
             {projectData.features.map((feature) => (
               <div key={feature.title} className="surface padded-card">
-                <div className="icon-box cyan-box">
-                  <Rocket size={18} />
+                <div className="card-heading">
+                  <div className="icon-box cyan-box">
+                    <Rocket size={18} />
+                  </div>
+                  <h3>{feature.title}</h3>
                 </div>
-                <h3>{feature.title}</h3>
                 <p className="body-copy compact">{feature.description}</p>
                 <div className="check-list">
                   {feature.highlights.map((highlight) => (
@@ -420,32 +428,40 @@ export default function App() {
 
           <div className="card-grid two-up">
             <div className="closing-mini-card">
-              <div className="icon-box dark-icon-box">
-                <Users size={18} />
+              <div className="card-heading">
+                <div className="icon-box dark-icon-box">
+                  <Users size={18} />
+                </div>
+                <h3>Who benefits?</h3>
               </div>
-              <h3>Who benefits?</h3>
               <p>Self-directed retail investors who want structured, evidence-grounded analysis instead of headline-chasing and guesswork.</p>
             </div>
             <div className="closing-mini-card">
-              <div className="icon-box dark-icon-box">
-                <Target size={18} />
+              <div className="card-heading">
+                <div className="icon-box dark-icon-box">
+                  <Target size={18} />
+                </div>
+                <h3>What changes?</h3>
               </div>
-              <h3>What changes?</h3>
               <p>Fewer impulsive trades during volatility. More portfolio-aware, evidence-scored decision-making before every buy, hold, or sell.</p>
             </div>
             <div className="closing-mini-card">
-              <div className="icon-box dark-icon-box">
-                <Layers3 size={18} />
+              <div className="card-heading">
+                <div className="icon-box dark-icon-box">
+                  <Layers3 size={18} />
+                </div>
+                <h3>Why this build?</h3>
               </div>
-              <h3>Why this build?</h3>
               <p>Multi-agent adversarial debate with Gated RAG grounding and evidence scoring forces the system to present both sides and flag weak claims.</p>
             </div>
             <div className="closing-mini-card">
-              <div className="icon-box dark-icon-box">
-                <Rocket size={18} />
+              <div className="card-heading">
+                <div className="icon-box dark-icon-box">
+                  <Rocket size={18} />
+                </div>
+                <h3>What is next?</h3>
               </div>
-              <h3>What is next?</h3>
-              <p>Plaid portfolio sync, voice input, PDF report export, and real-time agent streaming to move from demo prototype toward production.</p>
+              <p>Plaid portfolio sync, voice input, and real-time agent streaming to move from demo prototype toward production.</p>
             </div>
           </div>
         </section>

@@ -122,7 +122,7 @@ export const projectData: ProjectPageData = {
     'Retail investors routinely make emotional, one-sided decisions during market volatility \u2014 panic-selling on fear or revenge-buying on hype. According to DALBAR research, the average equity fund investor underperforms the S&P 500 by up to 4.5% annually, driven almost entirely by impulsive reactions to macroeconomic shocks. Existing tools either echo headlines without analysis (standard AI chatbots), cost tens of thousands per year (Bloomberg terminals), or apply rigid rules without context (robo-advisors). Retail investors lack a structured way to evaluate upside, downside, and hidden concentration risk before acting on a trade.',
 
   solutionSummary:
-    'InvestiGate replaces single-perspective AI responses with a structured multi-agent debate. When a user asks "Should I buy NVDA?", the system retrieves SEC 10-K filings, live market data, and historical scenario precedents, then runs four specialized agents in parallel: a Bull Analyst builds the strongest case for the investment, a Bear Analyst counters with risks and rebuttals, a Portfolio Strategist calculates hidden exposure through ETFs and assesses concentration risk, and a Judge (CIO) scores each agent\'s evidence quality and synthesizes a final recommendation with a traffic-light confidence signal, suggested allocation, and entry strategy.',
+    'InvestiGate replaces single-perspective AI responses with a structured multi-agent debate. When a user asks "Should I buy ACN?", the system retrieves SEC 10-K filings, live market data, and historical scenario precedents, then runs four specialized agents in parallel: a Bull Analyst builds the strongest case for the investment, a Bear Analyst counters with risks and rebuttals, a Portfolio Strategist calculates hidden exposure through ETFs and assesses concentration risk, and a Judge (CIO) scores each agent\'s evidence quality and synthesizes a final recommendation with a traffic-light confidence signal, suggested allocation, and entry strategy.',
 
   audience: 'Self-directed retail investors managing their own portfolios during volatile market conditions',
   impactGoal: 'Reduce impulsive, emotion-driven trading decisions by providing structured, evidence-grounded analysis with portfolio-aware risk context',
@@ -266,7 +266,7 @@ export const projectData: ProjectPageData = {
     {
       title: 'Input Layer',
       description:
-        'User submits a query (e.g., "Should I buy NVDA?") with action type (Buy/Hold/Sell), dollar amount, risk tolerance, and time horizon. An Intent Router (GPT-4o-mini) extracts the ticker, action, and relevant scenario types.',
+        'User submits a query (e.g., "Should I buy ACN?") with action type (Buy/Hold/Sell), dollar amount, risk tolerance, and time horizon. An Intent Router (GPT-4o-mini) extracts the ticker, action, and relevant scenario types.',
     },
     {
       title: 'Grounding & Retrieval Layer',
@@ -327,6 +327,7 @@ app = workflow.compile()`,
         'Hidden ETF exposure detection across major index funds',
         'SEC 10-K filing grounding and evidence scoring (0\u201340 scale)',
         'RAG-powered historical scenario matching',
+        'PDF export of full analysis reports with agent reasoning',
       ],
     },
     {
@@ -334,7 +335,6 @@ app = workflow.compile()`,
       items: [
         'Plaid integration for automatic portfolio sync from brokerage accounts',
         'Voice input via Whisper API for hands-free analysis queries',
-        'PDF export of full analysis reports with agent reasoning',
         'Real-time streaming of agent reasoning progress to the frontend',
       ],
     },
